@@ -1,0 +1,13 @@
+<div class='form-group'>
+    <%= select("order", "customer_id", Customer.all.collect {|p| [p.name, p.id] }, { include_blank: true}, :class => 'form-control')%>
+</div>
+<div class='form-group'>
+<%= c.label :product, 'product' %>
+<%= c.text_field :product, :class => "form-control" %>
+</div>
+<div class='form-group'>
+<%= c.label :price, 'price' %>
+<%= c.text_field :price, :class => "form-control" %>
+</div>
+
+<%= c.submit "submit", :class => "btn btn-primary" %>

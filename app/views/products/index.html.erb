@@ -1,0 +1,19 @@
+<div class = "table-responsive">
+<table class='table table-striped'>
+<tr>
+<th>product_id</th>
+<th>Name</th>
+<th>Quantity</th>
+<th>Unit_price</th>
+</tr>
+<% @products.each do |product| %>
+    <tr>
+    <td> <%= product.product_id %> </td>
+    <td> <%= product.name %> </td>
+    <td> <%= product.quantity %> </td>
+    <td> <%= product.unit_price %> </td>
+    </tr>
+<% end %>
+
+</table>
+</div>

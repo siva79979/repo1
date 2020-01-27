@@ -1,0 +1,20 @@
+<div class = "table-responsive">
+<table class='table table-striped'>
+<%= link_to "new", new_customer_path, :class => 'btn btn-primary' %>
+<tr>
+<th>Name</th>
+<th>Address</th>
+<th>Mobile</th>
+<th></th>
+</tr>
+<% @customer.each do |customer| %>
+    <tr>
+    <td> <%= customer.name %> </td>
+    <td> <%= customer.address %> </td>
+    <td> <%= customer.mobile %> </td>
+    <td> <%= link_to "View", customer_orders_path(customer) %>
+    <%= link_to "edit", edit_customer_path(customer), :class => 'edit_button' %></td>
+    </tr>
+<% end %>
+</table>
+</div>

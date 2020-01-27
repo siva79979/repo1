@@ -1,0 +1,4 @@
+
+<%= image_tag url_for(@post.cover_photo) %>
+<%= link_to @post.cover_photo.image.jpeg, rails_blob_path(@post.cover_photo, disposition: "attachment") %>
+
